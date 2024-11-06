@@ -1,21 +1,48 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.Galleryproducts {
+  text-align: center; 
+  color: #4a5568; 
+  padding: 2rem 0; 
+  overflow: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.container {
+  max-width: 1200px;
+  margin: 0 auto; 
+  padding: 0 1rem; 
+}
+
+.Wrap {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: flex-start; 
+}
+
+.Card {
+  flex: 1 1 calc(25% - 1rem); 
+  max-width: calc(25% - 1rem); 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+  border-radius: 8px; 
+  margin: 0.5rem; 
+  background-color: #ffffff; 
+  transition: transform 0.3s; 
+}
+
+.Card:hover {
+  transform: scale(1.05); 
+}
+
+
+@media (max-width: 768px) {
+  .Card {
+    flex: 1 1 calc(50% - 1rem); 
+    max-width: calc(50% - 1rem);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@media (max-width: 480px) {
+  .Card {
+    flex: 1 1 100%; 
+    max-width: 100%;
+  }
 }
+
